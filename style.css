@@ -1,0 +1,149 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #f8f5f0; /* cream */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Segoe UI', sans-serif;
+    color: #1e293b;
+}
+
+/* container */
+.container{
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+    width: 100%;
+    max-width: 600px;
+    overflow: hidden;
+}
+
+/* screens */
+.screen{
+    display: none;
+    padding: 2rem;
+    text-align: center;
+}
+
+.screen.active{
+    display: block;
+}
+
+/* headings */
+#start-screen h1{
+    margin-bottom: 20px;
+    color: #c9a227; /* gold */
+}
+
+/* quiz */
+.quiz-header{
+    margin-bottom: 20px;
+}
+
+#question-text{
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: #334155;
+}
+
+.quiz-info{
+    display: flex;
+    justify-content: space-between;
+    color: #64748b;
+    font-size: 0.9rem;
+}
+
+/* answers */
+.answer-container{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.answer-btn{
+    padding: 12px;
+    border-radius: 12px;
+    background: #f1f5f9;
+    border: 1px solid #e2e8f0;
+    color: #1e293b;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* hover glow */
+.answer-btn:hover{
+    border-color: #c9a227;
+    box-shadow: 0 0 10px rgba(201,162,39,0.4);
+    background: #ffffff;
+}
+
+/* correct / wrong */
+.answer-btn.correct{
+    background: #dcfce7;
+    color: #166534;
+    box-shadow: 0 0 10px rgba(34,197,94,0.4);
+}
+
+.answer-btn.incorrect{
+    background: #fee2e2;
+    color: #991b1b;
+    box-shadow: 0 0 10px rgba(239,68,68,0.4);
+}
+
+/* progress bar */
+.progress-bar{
+    height: 10px;
+    background: #e2e8f0;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.progress{
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #c9a227, #e6c65c);
+    box-shadow: 0 0 10px rgba(201,162,39,0.5);
+    transition: width 0.4s ease;
+}
+
+/* buttons */
+button{
+    margin-top: 20px;
+    padding: 12px 25px;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #c9a227, #e6c65c);
+    color: #1e293b;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+button:hover{
+    box-shadow: 0 8px 20px rgba(201,162,39,0.3);
+    transform: scale(1.05);
+}
+
+/* result */
+#result-screen h1{
+    color: #c9a227;
+}
+
+.result-info{
+    background: #f1f5f9;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #e2e8f0;
+}
+
+#result-message{
+    margin-top: 10px;
+    font-size: 1.3rem;
+    color: #16a34a;
+}
